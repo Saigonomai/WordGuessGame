@@ -5,7 +5,7 @@
         var loss = 0;
         var guesses = 10;
         var guessedStr = "";
-        var wordlist = ['billy jean','beat it'];
+        var wordlist = ['space out','beat it'];
         var correctGuesses = [];
         var wordStr = "";
         var gameover = false;
@@ -32,8 +32,7 @@
             }
             for (i=0; i < wordlist[wordnum].length; i++) {
                 if (correctGuesses.includes(wordlist[wordnum][i])){
-                    console.log("here");
-                    wordStr += wordlist[wordnum][i] + " ";
+                    wordStr += wordlist[wordnum][i] + "&nbsp;";
                 } else {
                     wordStr += "_ ";
                 }
