@@ -1,0 +1,54 @@
+body:before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background-image: url('../images/backdrop.jpg');
+    background-size: cover;
+}
+.title{
+    float: left;
+}
+.flag {
+    height: 60px;
+}
+.header{
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;  
+}
+.wordbox{
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;  
+}
+.win{
+    float: left;
+    margin: 10px;
+}
+.lose{
+    float: left;
+    margin: 10px;
+}
+.guessleft{
+    float: left;
+    margin: 10px;    
+}
+.guessed{
+    float: left;
+    margin: 10px;
+}
+.infobox{
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;  
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}

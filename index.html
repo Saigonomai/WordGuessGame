@@ -5,19 +5,23 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <div>
-            <h1 class="msg" id="msg">Press any Key to get started!</h1>
+        <div class="header">
+            <h1 class="title">Around the World Guessing Game!</h1>
+            <img class="flag" id="hint">
+            <div class="clearfix"></div>
+            <h2 class="msg" id="msg">Press any Key to get started!</h2>
         </div>
-        <div>
-            <h2 class="word" id="word"></h2>
+        <div class="wordbox">
+            <h1 class="word" id="word"></h1>
         </div>    
-        <div>
-            <h3 class="win" id="win">Wins:_</h3>
-            <h3 class="lose" id="lose">Losses:_</h3>
+        <div class="infobox">
+            <h4 class="win" id="win">Wins:_</h4>
+            <h4 class="lose" id="lose">Losses:_</h4>
         </div>
-        <div>
-            <h3 class="guessleft" id="guessleft">Number of guesses remaining:_</h3>
-            <h3 class="guessed" id="guessed">Letters already guessed:_</h3>
+        <div class="clearfix"></div>
+        <div class="infobox">
+            <h4 class="guessleft" id="guessleft">Number of guesses remaining:_</h4>
+            <h4 class="guessed" id="guessed">Letters already guessed:_</h4>
         </div>             
         <script src="assets/javascript/game.js"></script>
     </body>

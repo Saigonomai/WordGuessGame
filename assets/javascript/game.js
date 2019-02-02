@@ -3,9 +3,9 @@
         var wordnum = 0;
         var win = 0;
         var loss = 0;
-        var guesses = 10;
+        var guesses = 15;
         var guessedStr = "";
-        var wordlist = ['space out','beat it'];
+        var wordlist = ["canada", "china", "japan", "mexico", "united kingdom", "south korea", "australia",  "greece"];
         var correctGuesses = [];
         var wordStr = "";
         var gameover = false;
@@ -42,7 +42,7 @@
         }
         //progresses the game to the next word
         function nextWord(){
-            guesses = 10;
+            guesses = 15;
             guessedStr = "";
             correctGuesses = [];
             wordStr = "";
@@ -53,12 +53,16 @@
                     wordStr += "_ ";
                 }
                 document.getElementById("word").innerHTML = wordStr.trim();
+                document.getElementById("hint").src = "assets/images/" + wordlist[wordnum] +".png";
         
             } else {
                 if (win > loss) {
-                    document.getElementById("msg").innerHTML = "You win!"
+                    document.getElementById("msg").innerHTML = "You win!";
+                    document.getElementById("hint").src = "assets/images/fireworks.png";
+                    document.getElementById("hint").style.height = 150;
                 } else {
-                    document.getElementById("msg").innerHTML = "Game Over!"
+                    document.getElementById("msg").innerHTML = "Better Luck Next Time!";
+                    document.getElementById("hint").src = "assets/images/surrender.png";
                 }
                 gameover = true;
             }
@@ -75,18 +79,19 @@
             if ((guesses === 0) || wordGuessed) {
                 if (wordGuessed) {
                     win += 1;
-                    document.getElementById("msg").innerHTML = "Congratulations"
+                    document.getElementById("msg").innerHTML = "Congratulations";
                 } else if (guesses ===0) {
                     loss +=1;
-                    document.getElementById("msg").innerHTML = "Too Bad! :("
+                    document.getElementById("msg").innerHTML = "Too Bad!";
                 }
-                nextWord()
+                nextWord();
             }
         }
         for (i=0; i < wordlist[wordnum].length; i++) {
             wordStr += "_ ";
         }
         document.getElementById("word").innerHTML = wordStr.trim();
+        document.getElementById("hint").src = "assets/images/" + wordlist[wordnum] +".png";
         updateValues();
         window.addEventListener("keypress", function(e){
             var key = e.key.toLowerCase();
@@ -98,6 +103,6 @@
             }
 
 
-        })
+        });
     };
 }());
